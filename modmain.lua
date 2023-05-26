@@ -1,18 +1,20 @@
 local backpack = GetModConfigData("backpack_config");
-local backpack_cooling = GetModConfigData("backpack_cooling_config");
+--local backpack_cooling = GetModConfigData("backpack_cooling_config");
 
 local piggyback = GetModConfigData("piggyback_config");
-local piggyback_cooling = GetModConfigData("piggyback_cooling_config");
+--local piggyback_cooling = GetModConfigData("piggyback_cooling_config");
 
 local krampus_sack = GetModConfigData("krampus_sack_config");
-local krampus_sack_cooling = GetModConfigData("krampus_sack_cooling_config");
+--local krampus_sack_cooling = GetModConfigData("krampus_sack_cooling_config");
 
 local icepack = GetModConfigData("icepack_config");
-local icepack_cooling = GetModConfigData("icepack_cooling_config");
+--local icepack_cooling = GetModConfigData("icepack_cooling_config");
 
 local sisturn = GetModConfigData("sisturn_config");
 
 local cookpot = GetModConfigData("cookingPot_config")
+
+local endTable = GetModConfigData("endTable_config")
 
 --修改覆盖 tuning values !
 	TUNING.PERISH_MUSHROOM_LIGHT_MULT = GetModConfigData("mushroom_light_config");
@@ -75,7 +77,15 @@ AddPrefabPostInit("sisturn", function(inst)
 	end
 end)
 
+--烹饪锅
 AddPrefabPostInit("cookpot", function(inst)
+	if cookpot then
+		inst:AddTag("fridge")
+	end
+end)
+
+--茶几
+AddPrefabPostInit("endtable", function(inst)
 	if cookpot then
 		inst:AddTag("fridge")
 	end

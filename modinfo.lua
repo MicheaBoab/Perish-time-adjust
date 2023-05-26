@@ -201,7 +201,7 @@ configuration_options =
 	{
 		name = "",
 		label = "骨灰盒 󰀏",
-		hover = "",
+		hover = "Sisturn",
 		default = 0,
 		options = {
 			{description = "", data = 0},
@@ -222,7 +222,7 @@ configuration_options =
 	{
 		name = "",
 		label = "烹饪锅 󰀏",
-		hover = "",
+		hover = "CookingPot",
 		default = 0,
 		options = {
 			{description = "", data = 0},
@@ -232,6 +232,27 @@ configuration_options =
 		name = "cookingPot_config",
 		label = "烹饪锅",
 		hover = "CookingPot spoilage rate config",
+		options =	{
+			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
+			{description = "开", data = true, hover = "Spoilage rate (ON) Like fridge"},
+		},
+		default = false,
+	},
+	
+		--茶几
+	{
+		name = "",
+		label = "茶几 󰀏",
+		hover = "EndTable",
+		default = 0,
+		options = {
+			{description = "", data = 0},
+		},
+	},
+	{
+		name = "endTable_config",
+		label = "烹饪锅",
+		hover = "EndTable spoilage rate config",
 		options =	{
 			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
 			{description = "开", data = true, hover = "Spoilage rate (ON) Like fridge"},
