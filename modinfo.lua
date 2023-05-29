@@ -251,7 +251,7 @@ configuration_options =
 	},
 	{
 		name = "endTable_config",
-		label = "烹饪锅",
+		label = "茶几",
 		hover = "EndTable spoilage rate config",
 		options =	{
 			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
