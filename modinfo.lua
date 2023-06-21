@@ -2,7 +2,7 @@
 name = "保鲜/反鲜 Perish Time Modifier"
 description = "Change perish time for mushroom light/icebox/saltbox/endtable"
 author = "MicheaBoab"
-version = "2.0"
+version = "2.2"
 
 -- This lets other players know if your mod is out of date, update it to match the current version in the game
 

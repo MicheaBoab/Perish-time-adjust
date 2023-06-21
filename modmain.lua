@@ -86,7 +86,7 @@ end)
 
 --茶几
 AddPrefabPostInit("endtable", function(inst)
-	if cookpot then
+	if endTable then
 		inst:AddTag("fridge")
 	end
 end)
