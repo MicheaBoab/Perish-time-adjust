@@ -12,11 +12,12 @@
 	local backpack = GetModConfigData("backpack_config");
 	
 	AddPrefabPostInit("backpack", function(inst)
-		if backpack ~= 0 then
+		if backpack == 1 then
 			inst:AddTag("fridge")
-			if backpack == 2 then
-				inst:AddTag("nocool")
-			end
+		end
+		if backpack == 2 then
+			inst:AddTag("fridge")
+			inst:AddTag("nocool")
 		end
 	end)
 	
@@ -24,11 +25,12 @@
 	local piggyback = GetModConfigData("piggyback_config");
 	
 	AddPrefabPostInit("piggyback", function(inst)
-		if piggyback ~= 0 then
+		if backpack == 1 then
 			inst:AddTag("fridge")
-			if piggyback == 2 then
-				inst:AddTag("nocool")
-			end
+		end
+		if backpack == 2 then
+			inst:AddTag("fridge")
+			inst:AddTag("nocool")
 		end
 	end)
 
@@ -46,11 +48,12 @@
 	local krampus_sack = GetModConfigData("krampus_sack_config");
 
 	AddPrefabPostInit("krampus_sack", function(inst)
-		if krampus_sack ~= 0 then
+		if backpack == 1 then
 			inst:AddTag("fridge")
-			if krampus_sack == 2 then
-				inst:AddTag("nocool")
-			end
+		end
+		if backpack == 2 then
+			inst:AddTag("fridge")
+			inst:AddTag("nocool")
 		end
 	end)
 
