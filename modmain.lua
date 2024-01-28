@@ -4,6 +4,9 @@
 	
 --盐罐
 	TUNING.PERISH_SALTBOX_MULT = GetModConfigData("saltbox_config");
+
+--	
+	TUNING.BEARGERFUR_SACK_PRESERVER_RATE = GetModConfigData("beargerfur_sack_config")
 	
 -- 蘑菇灯
 	TUNING.PERISH_MUSHROOM_LIGHT_MULT = GetModConfigData("mushroom_light_config");
@@ -75,6 +78,7 @@
 		end
 	end)
 
+--[[
 --茶几
 	local endTable = GetModConfigData("endTable_config")
 
@@ -83,4 +87,13 @@
 			inst:AddTag("fridge")
 		end
 	end)
+	--]]
 
+--哈奇
+	local cookpot = GetModConfigData("hutch_config")
+
+	AddPrefabPostInit("hutch", function(inst)
+		if cookpot then
+			inst:AddTag("fridge")
+		end
+	end)

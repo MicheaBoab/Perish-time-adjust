@@ -1,8 +1,8 @@
 -- This information tells other players more about the mod
 name = "保鲜/反鲜 Perish Time Modifier"
-description = "Change perish time for mushroom light/icebox/saltbox/endtable"
+description = "Change perish time for mushroom light/icebox/saltbox/endtable  修改容器的保鲜/反鲜时间"
 author = "MicheaBoab"
-version = "3.2"
+version = "4.0"
 
 -- This lets other players know if your mod is out of date, update it to match the current version in the game
 
@@ -27,7 +27,7 @@ configuration_options =
 	--冰箱
 	{
 		name = "",
-		label = "󰀏 Fridge	冰箱 󰀏",
+		label = "󰀏 Fridge 冰箱 󰀏",
 		hover = "Fridge",
 		default = 0,
 		options = {
@@ -40,8 +40,8 @@ configuration_options =
 		hover = "Ice Fridge spoilage rate config",
 		options =	{
 			{description = "默认腐烂速度", data = 0.5, hover = "Default spoil time"},
-			-- 这个数值改为小于等于0的时候会影响熊包的正常工作. 暂时改为超长时间约等于完全保鲜
-			{description = "完全保鲜(超长时间)", data = 0.0000000005, hover = "Spoil slower"},
+			-- 这个数值改为小于等于0的时候会影响熊包保鲜但不制冷功能的正常工作. 暂时改为超长时间约等于完全保鲜
+			{description = "完全保鲜(超长时间)", data = 0.00005, hover = "Spoil slower"},
 			--{description = "完全保鲜", data = 0, hover = "Food fresh forever(keep current freshness)"},
 			{description = "神奇的反鲜", data = - 2, hover = "Regain freshness over time"},
 		},
@@ -51,7 +51,7 @@ configuration_options =
 	--盐盒
 	{
 		name = "",
-		label = "󰀏 Salt Box	盐盒 󰀏",
+		label = "󰀏 Salt Box 盐盒 󰀏",
 		hover = "Salt Box",
 		default = 0,
 		options = {
@@ -60,7 +60,7 @@ configuration_options =
 	},
 	{
 		name = "saltbox_config",
-		label = "spoilage rate config	腐烂速率",
+		label = "spoilage rate config 腐烂速率",
 		hover = "Salt Box spoilage rate config",
 		options =	{
 			{description = "默认腐烂速度", data = 0.25, hover = "Default spoil time"},
@@ -71,10 +71,33 @@ configuration_options =
 		default = 0.25,
 	},
 	
+	--极地熊獾桶
+	{
+		name = "",
+		label = "󰀏 Beargerfur Sack 熊獾桶 󰀏",
+		hover = "Beargerfur Sack",
+		default = 0,
+		options = {
+			{description = "", data = 0},
+		},
+	},
+	{
+		name = "beargerfur_sack_config",
+		label = "spoilage rate config 腐烂速率",
+		hover = "Beargerfur_Sack spoilage rate config",
+		options =	{
+			{description = "默认腐烂速度", data = 0.05, hover = "Default spoil time"},
+			{description = "长时间保鲜", data = 0.01, hover = "Spoil slower"},
+			{description = "完全保鲜", data = 0, hover = "Food fresh forever(keep current freshness)"},
+			{description = "神奇的反鲜", data = - 2, hover = "Regain freshness over time"},
+		},
+		default = 0.05,
+	},
+	
 	--蘑菇灯
 	{
 		name = "",
-		label = "󰀏 Mushroom_Light	蘑菇灯 󰀏",
+		label = "󰀏 Mushroom_Light 蘑菇灯 󰀏",
 		hover = "Mushroom_Light",
 		default = 0,
 		options = {
@@ -97,7 +120,7 @@ configuration_options =
 	--各种背包
 	{
 		name = "",
-		label = " 󰀏 All Backpacks	背包保鲜效果 󰀏",
+		label = " 󰀏 All Backpacks 背包保鲜效果 󰀏",
 		hover = "All Backpacks",
 		default = 0,
 		options = {
@@ -107,7 +130,7 @@ configuration_options =
 	--普通背包
 	{
 		name = "backpack_config",
-		label = "Backpack	普通背包",
+		label = "Backpack 普通背包",
 		hover = "Backpack spoilage rate config",
 		options =	{
 			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -119,7 +142,7 @@ configuration_options =
 	--小猪包
 	{
 		name = "piggyback_config",
-		label = "Piggyback	小猪包",
+		label = "Piggyback 小猪包",
 		hover = "Piggyback spoilage rate config",
 		options =	{
 			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -131,7 +154,7 @@ configuration_options =
 	--隔热包
 	{
 		name = "icepack_config",
-		label = "Ice Pack	隔热背包",
+		label = "Ice Pack 隔热背包",
 		hover = "Ice Pack spoilage rate config",
 		options =	{
 			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -142,7 +165,7 @@ configuration_options =
 	--小偷包
 	{
 		name = "krampus_sack_config",
-		label = "Krampus sack	坎普斯包",
+		label = "Krampus sack 坎普斯包",
 		hover = "Krampus sack spoilage rate function",
 		options =	{
 			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -155,7 +178,7 @@ configuration_options =
 	--骨灰盒
 	{
 		name = "",
-		label = "󰀏 Sisturn	骨灰盒 󰀏",
+		label = "󰀏 Sisturn 骨灰盒 󰀏",
 		hover = "Sisturn",
 		default = 0,
 		options = {
@@ -164,7 +187,7 @@ configuration_options =
 	},
 	{
 		name = "sisturn_config",
-		label = "spoilage rate config	姐妹骨灰盒",
+		label = "spoilage rate config 姐妹骨灰盒",
 		hover = "Sisturn spoilage rate config",
 		options =	{
 			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -172,10 +195,11 @@ configuration_options =
 		},
 		default = false,
 	},
+	
 	--烹饪锅
 	{
 		name = "",
-		label = "󰀏 CookingPot	烹饪锅 󰀏",
+		label = "󰀏 CookingPot 烹饪锅 󰀏",
 		hover = "CookingPot",
 		default = 0,
 		options = {
@@ -184,7 +208,7 @@ configuration_options =
 	},
 	{
 		name = "cookingPot_config",
-		label = "spoilage rate config	烹饪锅",
+		label = "spoilage rate config 烹饪锅",
 		hover = "CookingPot spoilage rate config",
 		options =	{
 			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
@@ -193,10 +217,11 @@ configuration_options =
 		default = false,
 	},
 	
+	--[[
 	--茶几
 	{
 		name = "",
-		label = "󰀏 EndTable	茶几 󰀏",
+		label = "󰀏 EndTable 茶几 󰀏",
 		hover = "EndTable",
 		default = 0,
 		options = {
@@ -205,8 +230,30 @@ configuration_options =
 	},
 	{
 		name = "endTable_config",
-		label = "spoilage rate config	茶几",
+		label = "spoilage rate config 茶几",
 		hover = "EndTable spoilage rate config",
+		options =	{
+			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
+			{description = "开", data = true, hover = "Spoilage rate (ON) Like fridge"},
+		},
+		default = false,
+	},
+	--]]
+	
+	--哈奇
+	{
+		name = "",
+		label = "󰀏 Hutch 哈奇 󰀏",
+		hover = "Hutch",
+		default = 0,
+		options = {
+			{description = "", data = 0},
+		},
+	},
+	{
+		name = "hutch_config",
+		label = "spoilage rate config 哈奇",
+		hover = "Hutch spoilage rate config",
 		options =	{
 			{description = "关", data = false, hover = "Spoilage rate (OFF) Vanilla version"},
 			{description = "开", data = true, hover = "Spoilage rate (ON) Like fridge"},
@@ -215,4 +262,4 @@ configuration_options =
 	},
 }
 
-priority = 1024.0
+priority = 1.0
