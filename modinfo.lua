@@ -2,7 +2,7 @@
 name = "保鲜/反鲜 Perish Time Modifier"
 description = "Change perish time for mushroom light/icebox/saltbox/endtable  修改容器的保鲜/反鲜时间"
 author = "MicheaBoab"
-version = "4.0"
+version = "4.2"
 
 -- This lets other players know if your mod is out of date, update it to match the current version in the game
 
@@ -69,6 +69,50 @@ configuration_options =
 			{description = "神奇的反鲜", data = - 2, hover = "Regain freshness over time"},
 		},
 		default = 0.25,
+	},
+	
+	--盐晶
+	{
+		name = "",
+		label = "󰀏 Salt Rock 盐晶 󰀏",
+		hover = "Salt Rock",
+		default = 0,
+		options = {
+			{description = "", data = 0},
+		},
+	},
+	{
+		name = "saltrock_config",
+		label = "Recover rate config 回复速率",
+		hover = "Salt Rock recovery rate config",
+		options =	{
+			{description = "默认倍率", data = 0.5, hover = "Default recovery amount"},
+			{description = "双倍", data = 1, hover = "Double recovery amount"},
+		},
+		default = 0.5,
+	},
+	
+	--种子袋
+	{
+		name = "",
+		label = "󰀏 Seed Pouch 种子袋 󰀏",
+		hover = "Seed Pouch",
+		default = 0,
+		options = {
+			{description = "", data = 0},
+		},
+	},
+	{
+		name = "seedpouch_config",
+		label = "spoilage rate config 腐烂速率",
+		hover = "Seed Pouch spoilage rate config",
+		options =	{
+			{description = "默认腐烂速度", data = 0.5, hover = "Default spoil time"},
+			{description = "长时间保鲜", data = 0.25, hover = "Spoil slower"},
+			{description = "完全保鲜", data = 0, hover = "Food fresh forever(keep current freshness)"},
+			{description = "神奇的反鲜", data = - 2, hover = "Regain freshness over time"},
+		},
+		default = 0.5,
 	},
 	
 	--极地熊獾桶
@@ -144,6 +188,18 @@ configuration_options =
 		name = "piggyback_config",
 		label = "Piggyback 小猪包",
 		hover = "Piggyback spoilage rate config",
+		options =	{
+			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
+			{description = "冰箱", data = 1, hover = "Spoilage rate (ON) Like fridge"},
+			{description = "熊包", data = 2, hover = "Spoilage rate (ON) Like Ice Pack"},
+		},
+		default = 0,
+	},
+	--威尔逊胡子
+	{
+		name = "beard_sack_config",
+		label = "Beard sack 威尔逊胡子",
+		hover = "Beard sack spoilage rate function",
 		options =	{
 			{description = "默认", data = 0, hover = "Spoilage rate (OFF) Vanilla version"},
 			{description = "冰箱", data = 1, hover = "Spoilage rate (ON) Like fridge"},
